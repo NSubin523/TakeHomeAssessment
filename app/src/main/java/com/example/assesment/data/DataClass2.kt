@@ -1,4 +1,7 @@
 package com.example.assesment.data
 
-class DataClass2 {
-}
+import com.google.gson.annotations.SerializedName
+
+data class DataClass2 (
+    @SerializedName("url") val post_url : String? = null,
+        )
