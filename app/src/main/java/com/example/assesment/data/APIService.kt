@@ -1,8 +1,9 @@
 package com.example.assesment.data
+
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Call
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Url
+import retrofit2.http.*
 
 interface APIService {
     @GET("/image")
@@ -11,6 +12,12 @@ interface APIService {
     @GET("/upload")
     fun getURlToPost(): Call<DataClass2>
 
+    @Multipart
     @POST()
-    fun sendImages(data: DataClass): Call<DataClass>
+    fun sendImages(
+        @Url url: String,
+        @Part("appid") appid: RequestBody,
+        @Part("original") original: RequestBody,
+        @Part file: MultipartBody.Part,
+    ): Call<Any>
 }

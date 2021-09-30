@@ -6,7 +6,6 @@
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
     android:background="#F5F5F5"
-
     >
 
     <ImageView
@@ -31,22 +30,22 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:text="TextView" />
 
     <TextView
         android:id="@+id/updatedAtID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextView"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.011"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createdAtID" />
+        app:layout_constraintTop_toBottomOf="@+id/createdAtID"
+        tools:text="TextView" />
 
     <Button
         android:id="@+id/postRequest"
@@ -56,7 +55,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginRight="10dp"
         android:backgroundTint="#FF5A5F"
-        android:text="@string/post_request"
+        android:text="@string/upload_image"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,7 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:backgroundTint="#FC642D"
-        android:text="Download"
+        android:text="@string/download"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.964"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,11 +78,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:backgroundTint="#3b5998"
         android:text="@string/apply_filters"
         app:layout_constraintEnd_toStartOf="@+id/downloadButton"
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
-        android:backgroundTint="#3b5998"
         app:layout_constraintTop_toBottomOf="@+id/postRequest" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
